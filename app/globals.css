@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto";
+  scroll-behavior: smooth !important;
+}
+.react-multi-carousel-dot--active button {
+  background-color: #ed2f59 !important;
+  border-color: transparent !important;
+}
+.react-multi-carousel-dot button {
+  background-color: #e0e0e0;
+  border-color: transparent !important;
+}
+
+.shape1,
+.shape2,
+.shape3,
+.shape4 {
+  position: absolute;
+  animation: run 15s infinite ease-in-out;
+}
+.shape2 {
+  animation-delay: 5000ms;
+}
+.shape3 {
+  animation-delay: 3000ms;
+}
+.shape4 {
+  animation-delay: 2000ms;
+}
+@keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.custom-shadow {
+  box-shadow: 0 9px 0px 0px transparent, 0 -9px 0px 0px transparent, 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+  -webkit-box-shadow: 0px -10px 20px 10px rgba(232, 183, 193, 1);
+  -moz-box-shadow: 0px -10px 20px 10px rgba(232, 183, 193, 1);
+  box-shadow: 0px -10px 20px 10px rgba(232, 183, 193, 1);
+}
