@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     name: "Kalamani Somasundaram",
-    text: "As an insurance agent, LeedsApp has transformed the way I manage my leads. It keeps me organized, reminds me of follow-ups at the perfect time, and ensures I never miss a client detail. This app has boosted my sales and improved my client relationships.",
+    text: "As an insurance agent, LeedsApp has transformed the way I manage my leads. It keeps me organized, reminds me of follow-ups at the perfect time, and ensures I never miss a client detail.",
     initials: "KS",
     location: "Banglore",
   },
@@ -70,7 +70,7 @@ export default function TestimonialCarousel() {
                   key={testimonial.id}
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                 >
-                  <Card className="my-8 h-[17rem] transition-all hover:shadow-xl hover:scale-105 bg-white mx-3 duration-400">
+                  <Card className="my-8 md:h-[17rem] transition-all hover:shadow-xl hover:scale-105 bg-white mx-3 duration-400">
                     <CardContent className="p-10 font-mono space-y-4">
                       <div className="flex  items-center space-x-4">
                         {testimonial.avatar ? (
