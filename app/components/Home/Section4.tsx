@@ -58,14 +58,14 @@ export default function PainPoints() {
 
       <div className="text-center space-y-6">
         <p className="text-xl md:text-2xl text-gray-800 font-medium">
-          Your business is too important for "I'll remember it somehow."
+          Your business is too important for &quot;I&apos;ll remember it somehow.&quot;
         </p>
 
         <div className="inline-block bg-[#ffe7ec] rounded-lg p-4 text-[#484848] rounded-xl max-w-2xl mx-auto">
           <div className="flex items-center gap-6">
              <Image height={200} width={200} alt="blub" src="/icons/bulb.svg" className="h-12 w-12" />
             <p className="text-sm md:text-base text-start">
-              Let <span className="font-semibold">LeedsApp</span> be your memory buddy - because you've got<br /> better
+              Let <span className="font-semibold">LeedsApp</span> be your memory buddy - because you&apos;ve got<br /> better
               things to do than worry about forgetting stuff!
             </p>
           </div>

@@ -5,7 +5,7 @@ export default function TestimonialSection() {
     <section className="bg-[#bda6c1] py-16 px-4 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-8 lg:mb-12">
-          Here's what our
+          Here&apos;s what our
           <br />
           clients are saying
         </h2>
@@ -64,7 +64,7 @@ export default function TestimonialSection() {
           <div className="lg:col-span-7 w-full bg-white rounded-2xl p-10">
             <p className="text-[#484848] text-xl mb-4">
               Ever since LeedsApp became my business assistant, everything
-              happens exactly when it should. It's like having a perfect memory
+              happens exactly when it should. It&apos;s like having a perfect memory
               for every client interaction and payment due date.
             </p>
             <div className="flex items-center justify-between">
