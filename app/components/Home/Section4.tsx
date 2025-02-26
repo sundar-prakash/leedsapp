@@ -12,7 +12,7 @@ const PainPointCard: React.FC<PainPointCardProps> = ({ title, imageSrc, altText,
     <div className="relative ">
       <div className="bg-[#ed2f59]  fonr-semibold rounded-t-xl text-white py-3 px-4 ">{title}</div>
       <div className="relative bg-[#F5F5F5] rounded-b-xl  h-[25rem] rounded-b-lg overflow-hidden">
-        <img src={imageSrc} alt={altText} className="w-full h-full object-cover" />
+        <Image width={500} height={500} src={imageSrc} alt={altText} className="w-full h-full object-cover" />
         <div className="absolute box arrow-top bottom-4 left-16 border border-black bg-white rounded-lg p-3 shadow-lg max-w-[15rem]">
           <p className="text-sm">{message}</p>
         </div>
