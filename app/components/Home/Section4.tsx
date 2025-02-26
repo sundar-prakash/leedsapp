@@ -1,119 +1,76 @@
 import Image from "next/image";
 
-
-interface ComparisonItem {
-  feature: string
-  description: string
+interface PainPointCardProps {
+  title: string;
+  imageSrc: string;
+  altText: string;
+  message: string;
 }
 
-const comparisonItems: ComparisonItem[] = [
-  {
-    feature: "Lead Organization",
-    description: "Easily manage and track leads with intuitive tools",
-  },
-  {
-    feature: "Follow-Up Management",
-    description: "Automated reminders and systematic follow-up tracking",
-  },
-  {
-    feature: "Task Management",
-    description: "Structured workflow with clear priorities",
-  },
-  {
-    feature: "Payment Tracking",
-    description: "Real-time payment status monitoring",
-  },
-  {
-    feature: "Data Management",
-    description: "Cloud backup and easy restoration",
-  },
-  {
-    feature: "Lead Prioritization",
-    description: "Smart categorization and priority management",
-  },
-  {
-    feature: "Data Import/Export",
-    description: "Quick Excel import and export capabilities",
-  },
-  {
-    feature: "Integration",
-    description: "Seamless integration with online forms and ads",
-  },
-]
-
-export default function ComparisonTable() {
+const PainPointCard: React.FC<PainPointCardProps> = ({ title, imageSrc, altText, message }) => {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12 ">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#333333] mb-12">Why LeedsApp?</h2>
-
-      <div className="relative  bg-white py-8 rounded-xl overflow-x-auto">
-        <div className="grid grid-cols-[1fr,auto,1fr]">
-          {/* Left column */}
-          <div>
-            <div className="p-4 mt-12 min-w-[150px] border-b border-gray-100" />
-            {comparisonItems.map((item, index) => (
-              <div
-                key={item.feature}
-                className={`p-4 ${index !== comparisonItems.length - 1 ? "border-b border-gray-100" : ""}`}
-              >
-                <h3 className="font-medium text-sm md:text-base text-gray-900">{item.feature}</h3>
-              
-              </div>
-            ))}
-          </div>
-
-          {/* Middle column (with LeedsApp) */}
-          <div className="relative min-w-[250px] z-10 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-xl">
-            <div className="p-4 text-center border-b border-gray-100">
-              <div className="flex items-center justify-center gap-2">
-                <span className="text-sm font-medium">with</span>
-                <Image
-                  src="/header.png"
-                  alt="LeedsApp"
-                  className="h-auto w-44"
-                  width={200}
-                  height={100}
-                />
-              </div>
-            </div>
-            {comparisonItems.map((item, index) => (
-              <div
-                key={index}
-                className={`p-4 flex items-center justify-start gap-3 ${index !== comparisonItems.length - 1 ? "border-b border-gray-100" : ""}`}
-              >
-                 <Image
-                src="/icons/tick.svg"
-                alt="tick"
-                width={30}
-                height={30}
-              />
-                <p className="text-xs md:text-sm text-gray-500 mt-0.5">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Right column */}
-          <div>
-            <div className="p-4 mt-6 text-center border-b border-gray-100">
-              <span className="text-sm font-medium text-gray-600">without</span>
-            </div>
-            {comparisonItems.map((_, index) => (
-              <div
-                key={index}
-                className={`p-4 flex items-center justify-center ${index !== comparisonItems.length - 1 ? "border-b border-gray-100" : ""}`}
-              >
-                 <Image
-                src="/icons/close.svg"
-                alt="close"
-                width={23}
-                height={23}
-              />
-              </div>
-            ))}
-          </div>
+    <div className="relative ">
+      <div className="bg-[#ed2f59]  fonr-semibold rounded-t-xl text-white py-3 px-4 ">{title}</div>
+      <div className="relative bg-[#F5F5F5] rounded-b-xl  h-[25rem] rounded-b-lg overflow-hidden">
+        <img src={imageSrc} alt={altText} className="w-full h-full object-cover" />
+        <div className="absolute box arrow-top bottom-4 left-16 border border-black bg-white rounded-lg p-3 shadow-lg max-w-[15rem]">
+          <p className="text-sm">{message}</p>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
+export default function PainPoints() {
+  const painPoints = [
+    {
+      title: "Missing calls?",
+      imageSrc: "/pp1.jpg",
+      altText: "Person missing calls",
+      message: "Shoot! I totally forgot to call back that interested client!",
+    },
+    {
+      title: "Chasing payments?",
+      imageSrc: "/pp2.jpg",
+      altText: "Person chasing payments",
+      message: "I should've called about that payment... was it yesterday?",
+    },
+    {
+      title: "Unorganised tasks?",
+      imageSrc: "/pp3.jpg",
+      altText: "Person with unorganized tasks",
+      message: "Everything feels urgent... what should I do first?",
+    },
+  ];
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      <h2 className="text-3xl md:text-5xl font-semibold text-[#484848] mb-8 md:mb-12">
+        Hey, Does this sound
+        <br className="hidden md:block" /> like your day?
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {painPoints.map((painPoint, index) => (
+          <PainPointCard key={index} {...painPoint} />
+        ))}
+      </div>
+
+      <div className="text-center space-y-6">
+        <p className="text-xl md:text-2xl text-gray-800 font-medium">
+          Your business is too important for "I'll remember it somehow."
+        </p>
+
+        <div className="inline-block bg-[#ffe7ec] rounded-lg p-4 text-[#484848] rounded-xl max-w-2xl mx-auto">
+          <div className="flex items-center gap-6">
+             <Image height={200} width={200} alt="blub" src="/icons/bulb.svg" className="h-12 w-12" />
+            <p className="text-sm md:text-base text-start">
+              Let <span className="font-semibold">LeedsApp</span> be your memory buddy - because you've got<br /> better
+              things to do than worry about forgetting stuff!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

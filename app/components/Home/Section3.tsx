@@ -1,126 +1,94 @@
-"use client"
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
-interface ServiceCategory {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-const categories: ServiceCategory[] = [
-  {
-    title: "Real Estate",
-    description:
-      "Track client viewings and manage property follow-ups efficiently",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Icon-Real-Estate.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-  {
-    title: "Education",
-    description: "Track student inquiries and manage course payment schedules",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Icon-Education.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-  {
-    title: "Financial Ventures",
-    description: "Monitor client interactions and payment schedules seamlessly",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Icon-fv.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-  {
-    title: "Retail & Local Businesses",
-    description: "Manage customer follow-ups and track business payments",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Icon-Retail-&-Local-Businesses.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-  {
-    title: "Professional Services",
-    description: "Organize client projects and track deliverable deadlines",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Icon-Professional-Services.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-  {
-    title: "Others",
-    description:
-      "Track client viewings and manage property follow-ups efficiently",
-    icon: (
-      <Image
-        alt="close"
-        width={30}
-        src="/icons/Frame.svg"
-        height={30}
-        className="w-16 h-16 text-primary"
-      />
-    ),
-  },
-];
-
-export default function PerfectFor() {
-  const ref = useRef(null)
-const isInView = useInView(ref,{once:true});
+export default function TestimonialSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto py-12 px-4 md:px-6">
-      <div className="space-y-4 mb-10 text-[#424242]">
-        <h2 className="text-2xl font-semibold text-muted-foreground">
-          Simple and Reliable Solution
+    <section className="bg-[#bda6c1] py-16 px-4 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-8 lg:mb-12">
+          Here's what our
+          <br />
+          clients are saying
         </h2>
-        <h3 className="text-4xl font-bold">Perfect for</h3>
-      </div>
-      <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-[#323232]">
-        {categories.map((category,index) => (
-           <motion.div
-           key={category.title}
-           className="flex items-start space-x-4 p-4 rounded-lg transition-colors hover:bg-muted/50"
-           initial={{ opacity: 0, y: 50 }}
-           animate={isInView?{ opacity: 1, y: 0 }:{}}
-           transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
-         >
-           <div className="flex-shrink-0 p-2 rounded-lg bg-primary/10">
-             {category.icon}
-           </div>
-           <div className="space-y-2">
-             <h4 className="text-xl font-semibold">{category.title}</h4>
-             <p className="text-muted-foreground">{category.description}</p>
-           </div>
-         </motion.div>
-        ))}
+
+        <div className="grid grid-cols-1 lg:grid-cols-8 gap-4 lg:gap-6">
+          {/* Profile and Main Quote */}
+          <Image
+            width={200}
+            height={200}
+            src="/testimonial-1.png"
+            alt="Stephen Strange"
+            className="w-36  hidden lg:block col-span-1 rounded-xl object-cover aspect-sqaure"
+          />
+          <div className="lg:col-span-5 flex gap-4 bg-white rounded-2xl p-10">
+            <div className="lg:pr-24 w-full">
+              <Image width={200}
+                  height={200}
+                  src="/icons/quote.svg"
+                  alt="Quote" 
+                  className="h-10 w-10 my-4"
+                  />
+              <p className="text-gray-800 mb-4 text-[#484848] text-2xl ">
+                LeedsApp is like having a reliable assistant who never forgets.
+                Now, I never miss follow-ups, experience delayed payments, or
+                forget important tasks. My business now operates seamlessly and
+                efficiently, running like clockwork.
+              </p>
+              <div className="flex items-center gap-6">
+                <Image
+                  width={200}
+                  height={200}
+                  src="/testimonial-1.png"
+                  alt="Stephen Strange"
+                  className="w-16 h-16 rounded-full lg:hidden object-cover"
+                />
+                <div>
+                  <p className="font-semibold  text-black">Stephen Strange</p>
+                  <p className="text-sm text-black">Sales Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Cards */}
+          <div className="space-y-4 lg:col-span-2 relative  text-[#484848] text-2xl ">
+            <div className="bg-white rounded-2xl p-10  ">
+              <p >100%</p>
+              <p >on-time client follow-ups</p>
+            </div>
+            <div className=" bg-white rounded-2xl p-10 ">
+              <p >Predictable</p>
+              <p >payment cycles</p>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 w-full bg-white rounded-2xl p-10">
+            <p className="text-[#484848] text-xl mb-4">
+              Ever since LeedsApp became my business assistant, everything
+              happens exactly when it should. It's like having a perfect memory
+              for every client interaction and payment due date.
+            </p>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-semibold  text-black">Natalya Romanova</p>
+                <p className="text-sm text-black">Business Owner</p>
+              </div>
+              <Image
+                width={200}
+                height={200}
+                src="/testimonial-2.png"
+                alt="Natalya Romanova"
+                className="w-16 h-16 rounded-full lg:hidden object-cover"
+              />
+            </div>
+          </div>
+          <Image
+            width={200}
+            height={200}
+            src="/testimonial-2.png"
+            alt="Stephen Strange"
+            className="aspect-sqaure w-36 hidden lg:block lg:col-span-1 rounded-xl object-cover"
+          />
+        </div>
       </div>
     </section>
   );

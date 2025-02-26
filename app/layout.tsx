@@ -1,24 +1,10 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import Script from "next/script";
+import { Montserrat } from "@/lib/font";
 
-// Configure Montserrat font
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  weight: ["300", "400", "600", "700"], // Specify weights
-  subsets: ["latin"],
-});
-
-// Configure Roboto font
-const roboto = Roboto({
-  variable: "--font-roboto",
-  weight: ["400", "700", "900"], // Specify weights
-  display: "swap", // Add display option
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "LeedsApp - Never Miss a Follow-Up Again",
@@ -72,7 +58,7 @@ export default function RootLayout({
   };
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${montserrat.variable} font-mono`}>
+      <body className={Montserrat.className}>
         <Header /> 
         {children}
         <Footer />

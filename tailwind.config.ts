@@ -9,12 +9,6 @@ export default {
   ],
   theme: {
   	extend: {
-		
-		
-			fontFamily: {
-			  roboto: ['var(--font-roboto)'],
-			  mono:['var(--font-montserrat)']
-			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

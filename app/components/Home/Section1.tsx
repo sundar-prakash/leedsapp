@@ -12,23 +12,21 @@ const Section1 = () => {
     >
       {/* //need to work on this */}
       <BackgroundGradientAnimation />
-      <h1 className=" text-[#383536] text-4xl lg:text-6xl font-semibold lg:leading-[70px]">
-        Never Miss a <br />
-        Follow-Up <span className="text-[#6A6A6A]">Again</span>
+      <h1 className=" text-[#484848] text-4xl lg:text-6xl font-semibold lg:leading-[70px]">
+      Your All-in-One Client & <br/> Business Management Solution 
       </h1>
-      <p className="text-base px-4 !my-6">
-        A <b>Simple CRM + Client Follow Up</b> App to close more deals, and build{" "}
-        <br /> stronger relationships with smart reminders tailored to your
-        schedule.
+      <p className="text-xl px-4 !my-6">
+      Manage leads, organize tasks & track payments in one mobile app
+
       </p>
       <div className="space-y-2">
         <PrimaryButton className="text-2xl px-9 py-3">
-          Try it Free
+          Download Now
         </PrimaryButton>
-        <p className="text-xs capitalize pt-4">No credit card required</p>
+        <p className="text-sm pt-4">Avail a 7 day free trial</p>
       </div>
 
-      <div className="max-w-2xl !mt-[-2rem] mx-auto relative flex justify-center">
+      <div className="max-w-2xl !mt-[-4rem] mx-auto relative flex justify-center">
         <motion.img
           src="/LeedsApp-HomeScreen.png"
           alt="LeedsApp calendar interface on mobile"

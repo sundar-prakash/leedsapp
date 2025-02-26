@@ -47,3 +47,29 @@ body {
   box-shadow: 0 10px 0px 0px transparent, 0 -10px 0px 0px transparent, 12px 0 15px -4px rgba(232, 183, 193, 0.7), -12px 0 15px -4px rgba(232, 183, 193, 0.7);
   
 }
+.box.arrow-top {
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: white; /* Ensures the background matches */
+  padding: 10px;
+}
+
+.box.arrow-top:before,
+.box.arrow-top:after {
+  content: "";
+  position: absolute;
+  left: 12px; /* Adjust to align correctly */
+  top: -13px; /* Move it closer to the box */
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.box.arrow-top:before {
+  border-bottom: 15px solid black; /* Outer border */
+  top: -14px; /* Move it slightly higher to blend better */
+}
+
+.box.arrow-top:after {
+  border-bottom: 15px solid white; /* Matches box background */
+}

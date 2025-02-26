@@ -21,7 +21,7 @@ const data: SimpleCarousel[] = [
     name: "Task Management",
     text: "Organize your daily tasks and project deadlines to boost productivity",
     image: "Kolkata",
-    bottomText: true,
+    bottomText: false,
   },
   {
     name: "Payment Tracking",
