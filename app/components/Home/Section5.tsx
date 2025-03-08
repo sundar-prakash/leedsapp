@@ -93,7 +93,7 @@ export default function ComparisonTable() {
 
           {/* Right column */}
           <div className="min-w-[300px]">
-            <div className="p-4 mt-6 text-center border-b border-gray-300">
+            <div className="p-4 text-center border-b border-gray-300">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sm font-medium text-gray-600">
                   without

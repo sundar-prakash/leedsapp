@@ -63,7 +63,7 @@ export default function PainPoints() {
 
         <div className="inline-block bg-[#ffe7ec] rounded-lg p-4 text-[#484848] rounded-xl max-w-2xl mx-auto">
           <div className="flex items-center gap-6">
-             <Image height={200} width={200} alt="blub" src="/icons/bulb.svg" className="h-12 w-12" />
+             <Image height={200} width={200} alt="blub" src="/icons/Bulb.svg" className="h-12 w-12" />
             <p className="text-sm md:text-base text-start">
               Let <span className="font-semibold">LeedsApp</span> be your memory buddy - because you&apos;ve got<br /> better
               things to do than worry about forgetting stuff!

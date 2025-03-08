@@ -3,7 +3,7 @@
 export const BackgroundGradientAnimation = () => {
   return (
     <div
-      className=" absolute -z-10 rounded-xl overflow-hidden
+      className="p-[60px] absolute -z-10 rounded-xl overflow-hidden
           h-[45rem] lg:h-[55rem] w-full lg:w-[96vw] 
           bg-gradient-to-b  flex items-end justify-end from-transparent to-[#facdda]"
     >
