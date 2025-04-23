@@ -1,0 +1,109 @@
+{
+    "General Questions": [
+      {
+        "question": "What is LeedsApp?",
+        "answer": "LeedsApp is a client follow-up and lead management tool designed to help businesses track leads, schedule reminders, and manage follow-ups efficiently—without the complexity of traditional CRMs."
+      },
+      {
+        "question": "Who is LeedsApp for?",
+        "answer": "LeedsApp is built for sales professionals, entrepreneurs, real estate agents, freelancers, small business owners, and teams who want to improve client follow-ups and maximize their lead conversions."
+      },
+      {
+        "question": "How is LeedsApp different from other CRMs?",
+        "answer": "Unlike traditional CRMs, LeedsApp is simple, user-friendly, and built specifically for lead follow-ups. It removes unnecessary complexity and focuses on helping businesses stay organized, engage leads, and close more deals faster."
+      }
+    ],
+    "Features & Functionality": [
+      {
+        "question": "What features does LeedsApp offer?",
+        "answer": [
+          "Call & Task Reminders – Get notified when it’s time to follow up.",
+          "Lead Tracking – Organize, manage, and track every prospect efficiently.",
+          "Payment & Task Reminders – Ensure timely payments and task completion.",
+          "Team Collaboration – Assign and track leads within your team.",
+          "Multi-Channel Follow-Ups – Manage calls, WhatsApp, and emails in one place.",
+          "Bulk Lead Import – Upload thousands of leads instantly for streamlined management."
+        ]
+      },
+      {
+        "question": "Can I use LeedsApp for team collaboration?",
+        "answer": "Yes! LeedsApp allows teams to assign leads, track follow-ups, and monitor performance, making it an ideal tool for sales teams and businesses managing multiple clients."
+      },
+      {
+        "question": "Does LeedsApp send automatic follow-ups?",
+        "answer": "No, LeedsApp does not automate follow-ups. It helps you schedule timely reminders so you can take action at the right time and never miss an important follow-up."
+      }
+    ],
+    "Pricing & Plans": [
+      {
+        "question": "Is LeedsApp free to use?",
+        "answer": "LeedsApp offers a 7-day free trial so you can explore its features before subscribing to a premium plan."
+      },
+      {
+        "question": "What are the pricing plans?",
+        "answer": "Our pricing plans vary based on the features you need. Visit our [Pricing Page] for the latest details."
+      },
+      {
+        "question": "Do you offer discounts for teams?",
+        "answer": "Yes! We provide special pricing for teams and bulk users. Contact our sales team for more details."
+      }
+    ],
+    "Technical & Support": [
+      {
+        "question": "How do I install LeedsApp?",
+        "answer": "LeedsApp is available for Android & iOS. You can download it here: Google Play Store – [Download Here], Apple App Store – [Download Here]"
+      },
+      {
+        "question": "Is my data safe with LeedsApp?",
+        "answer": "Yes! LeedsApp uses advanced encryption and secure cloud storage to protect your data."
+      },
+      {
+        "question": "How can I contact support?",
+        "answer": "For assistance, reach out via: Email: support@leedsapp.com, Live Chat: Available inside the app, Phone: [Customer Support Number]"
+      }
+    ],
+    "Using LeedsApp": [
+      {
+        "question": "How do I add a lead to LeedsApp?",
+        "answer": "Go to Leads > Add New Lead, enter the details, and save. You can also import leads in bulk from a CSV file."
+      },
+      {
+        "question": "How do I set up follow-up reminders?",
+        "answer": "When adding a lead, click “Set Reminder”, choose the date & time, and LeedsApp will notify you when it’s time to follow up."
+      },
+      {
+        "question": "Can I integrate LeedsApp with other tools?",
+        "answer": "LeedsApp is working on integrations with WhatsApp, email, and other CRM platforms. Stay tuned for updates!"
+      }
+    ],
+    "Troubleshooting & Account Management": [
+      {
+        "question": "I forgot my password. How can I reset it?",
+        "answer": "Go to the LeedsApp login page, click “Forgot Password”, and follow the instructions to reset it."
+      },
+      {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "LeedsApp subscriptions are non-refundable and billed annually. You can cancel your subscription at any time, but the plan will remain active until the end of the billing period."
+      },
+      {
+        "question": "My reminders are not working. What should I do?",
+        "answer": [
+          "Make sure: Notifications are enabled for LeedsApp.",
+          "Your phone is connected to the internet.",
+          "The reminder time & date are correctly set.",
+          "If issues persist, contact support@leedsapp.com for assistance."
+        ]
+      }
+    ],
+    "Final Questions": [
+      {
+        "question": "Can I suggest a feature for LeedsApp?",
+        "answer": "Yes! We welcome feedback and feature requests. Send your suggestions to feedback@leedsapp.com."
+      },
+      {
+        "question": "Where can I learn more about using LeedsApp effectively?",
+        "answer": "Visit our [LeedsApp Blog], where we share expert tips, strategies, and guides on improving your lead management and follow-ups."
+      }
+    ]
+  }
+  

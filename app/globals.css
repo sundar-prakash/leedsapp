@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto";
+  scroll-behavior: smooth !important;
+}
+.react-multi-carousel-dot--active button {
+  background-color: #ed2f59 !important;
+  border-color: transparent !important;
+}
+.react-multi-carousel-dot button {
+  background-color: #e0e0e0;
+  border-color: transparent !important;
+}
+
+.shape1,
+.shape2,
+.shape3,
+.shape4 {
+  position: absolute;
+  animation: run 18s infinite ease-in-out;
+}
+.shape2 {
+  animation-delay: 5000ms;
+}
+.shape3 {
+  animation-delay: 3000ms;
+}
+.shape4 {
+  animation-delay:2000ms;
+}
+@keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.custom-shadow {
+  box-shadow: 0 10px 0px 0px transparent, 0 -10px 0px 0px transparent, 12px 0 15px -4px rgba(232, 183, 193, 0.7), -12px 0 15px -4px rgba(232, 183, 193, 0.7);
+  
+}
+.box.arrow-top {
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: white; /* Ensures the background matches */
+  padding: 10px;
+}
+
+.box.arrow-top:before,
+.box.arrow-top:after {
+  content: "";
+  position: absolute;
+  left: 12px; /* Adjust to align correctly */
+  top: -13px; /* Move it closer to the box */
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.box.arrow-top:before {
+  border-bottom: 15px solid black; /* Outer border */
+  top: -14px; /* Move it slightly higher to blend better */
+}
+
+.box.arrow-top:after {
+  border-bottom: 15px solid white; /* Matches box background */
+}
+.embla__dot {
+ 
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  align-items: center;
+  border: 2px solid #ed2f59 ;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dot:after {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border-color: #ed2f59;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+  background-color: #ed2f59;
+
+}
