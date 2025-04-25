@@ -50,8 +50,9 @@ const imageUrl = imageFromContent || imageFromCarousel || "/default-image.png";
 }
 
 
-export default  function DocumentationPage({ params }: { params: { slug: string } }) {
-  const doc =  getDocumentationBySlug(params.slug)
+export default async function DocumentationPage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const doc =  getDocumentationBySlug(slug)
 
   if (!doc) {
     notFound()
