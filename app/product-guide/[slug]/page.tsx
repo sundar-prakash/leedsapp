@@ -9,8 +9,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function DocumentationPage({ params }: { params: { slug: string } }) {
-  const doc = getDocumentationBySlug(params.slug)
+export default  function DocumentationPage({ params }: { params: { slug: string } }) {
+  const doc =  getDocumentationBySlug(params.slug)
 
   if (!doc) {
     notFound()

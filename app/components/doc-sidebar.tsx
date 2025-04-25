@@ -34,16 +34,7 @@ export default function DocSidebar({ routes, onNavClick }: { routes: DocRoute[];
 
   return (
     <nav className="space-y-1">
-      <Link
-        href="/product-guide"
-        className={cn(
-          "block px-3 py-2 rounded-md text-sm font-medium",
-          pathname === "/product-guide" ? "bg-[#ED3059]/10 text-[#ED3059]" : "text-gray-700 hover:bg-gray-100",
-        )}
-        onClick={handleLinkClick}
-      >
-        Overview
-      </Link>
+     
 
       {Object.entries(groupedRoutes).map(([category, categoryRoutes]) => (
         <div key={category} className="space-y-1">

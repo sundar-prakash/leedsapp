@@ -55,7 +55,7 @@ export default function DocumentationLayout({
             viewBox="0 0 16 16"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
             />
           </svg>
@@ -135,6 +135,25 @@ export default function DocumentationLayout({
             <Suspense fallback={<div>Loading content...</div>}>
               {children}
             </Suspense>
+            <div className="flex items-center justify-center gap-6 mt-12 border-t pt-6 text-center">
+              <p className="text-gray-800 font-medium mb-2">
+                Was this helpful?
+              </p>
+              <div className="flex justify-center gap-4">
+                <button
+                  onClick={() => alert("Glad it helped! 👍")}
+                  className=" flex items-center p-4 border border-green-300 hover:border-green-500 text-green-700 text-sm font-medium rounded-full"
+                >
+                  👍
+                </button>
+                <button
+                  onClick={() => alert("Thanks for the feedback! 👌")}
+                  className="flex items-center p-4 border border-red-300 hover:border-red-500 text-red-700 text-sm font-medium rounded-full"
+                >
+                  👎
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

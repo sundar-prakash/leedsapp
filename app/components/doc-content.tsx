@@ -1,4 +1,3 @@
-
 import type { DocContentBlock } from "@/lib/documentation";
 import Image from "next/image";
 import DocImageCarousel from "./DocImageCarousel";
@@ -8,7 +7,6 @@ export default function DocContent({
 }: {
   content: DocContentBlock[];
 }) {
-
   return (
     <div className="space-y-8">
       {content.map((block, index) => {
@@ -36,6 +34,12 @@ export default function DocContent({
                 {block.content}
               </p>
             );
+          case "carousel":
+            return (
+              <div key={index} className="my-6">
+                <DocImageCarousel items={block.items} />
+              </div>
+            );
 
           case "image":
             return (
@@ -58,19 +62,30 @@ export default function DocContent({
           case "video":
             return (
               <div key={index} className="my-6">
-                <div className="aspect-video">
-                  <iframe
+                {!block.isMobile ? (
+                  // Desktop video
+                  <video
                     src={block.src}
-                    title={block.title || "Documentation video"}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full rounded-lg border"
-                  ></iframe>
-                </div>
-                {block.caption && (
-                  <p className="text-sm text-gray-500 mt-2 text-center">
-                    {block.caption}
-                  </p>
+                    controls
+                    muted={false}
+                    autoPlay={false}
+                    playsInline
+                    className="w-full h-full rounded-lg border hidden sm:block aspect-video"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  // Mobile video
+                  <video
+                    src={block.src}
+                    controls
+                    muted={false}
+                    autoPlay={false}
+                    playsInline
+                    className="w-full h-full rounded-lg border block sm:hidden aspect-[9/16]"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 )}
               </div>
             );
@@ -120,13 +135,6 @@ export default function DocContent({
               >
                 <p className="text-sm">{block.content}</p>
               </div>
-            );
-
-          case "carousel":
-            return (
-              <div key={index} className="my-6">
-      <DocImageCarousel items={block.items} />
-    </div>
             );
 
           default:

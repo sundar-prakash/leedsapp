@@ -78,15 +78,15 @@ export default function Section2() {
                       </CardContent>
                     </Card>
                     <div className="absolute top-40 left-0 right-0 w-full overflow-visible">
-                      <div className="w-[16rem] h-[32.8rem] mx-auto overflow-hidden rounded-[2.5rem] custom-shadow z-10">
+                      <div className="w-[16rem] h-[33.5rem] mx-auto overflow-hidden rounded-[2.7rem] custom-shadow z-10">
                         <video
                           autoPlay={true}
                           loop={true}
                           muted={true}
                           className="w-full h-auto object-cover relative"
                           style={{ transform: "translateY(-0.2%)" }}
-                          width="920"
-                          height="1920"
+                          width="590"
+                          height="1240"
                           controls={false}
                         >
                           <source src={`/features/v${i + 1}.mp4`} type="video/mp4" />

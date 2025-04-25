@@ -1,4 +1,4 @@
-import documentationData from "./test"
+import documentationData from "./docs-data"
 
 export interface DocRoute {
     title: string
