@@ -12,8 +12,8 @@ export default function ContactPage() {
         </h1>
         <div className="w-20 h-1 bg-[#ED3059] mx-auto mb-8"></div>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Have questions about LeedsApp? We&aposre here to help. Reach out to us
-          and we&aposll get back to you as soon as possible.
+          Have questions about LeedsApp? We&apos;re here to help. Reach out to us
+          and we&apos;ll get back to you as soon as possible.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
