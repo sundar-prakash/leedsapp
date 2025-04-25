@@ -43,7 +43,7 @@ export async function generateMetadata(
 
   if (!data) {
     return {
-      title: "Blog Post Not Found - Zingbizz Blog",
+      title: "Blog Post Not Found - Leedsapp Blog",
       description: "The requested blog post could not be found.",
       openGraph: {
         title: "Blog Post Not Found",
@@ -65,7 +65,7 @@ export async function generateMetadata(
     : "";
 
   return {
-    title: `${title} - Zingbizz Blog`,
+    title: `${title} - Leedsapp Blog`,
     description: desc,
     openGraph: {
       title,

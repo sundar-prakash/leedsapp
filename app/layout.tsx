@@ -7,7 +7,10 @@ import { Montserrat } from "@/lib/font";
 
 
 export const metadata: Metadata = {
-  title: "LeedsApp - Never Miss a Follow-Up Again",
+  title: {
+    default: 'LeedsApp - Never Miss a Follow-Up Again',
+    template: '%s - LeedsApp',
+  },
   description: "Lead Management & Followup",
   metadataBase: new URL('https://leedsapp.com'),
   robots: {

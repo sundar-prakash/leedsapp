@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import FAQ from '../components/FAQ';
 import faqdata from '@/public/faq.json'; // ✅ Make sure it's in src/data or similar
 
@@ -5,7 +6,7 @@ interface FAQItem {
   question: string;
   answer: string | string[];
 }
-
+export const metadata:Metadata = {title:"Faqs"}
 const FAQPage = () => {
   return (
     <div className="max-w-3xl mx-auto p-4">

@@ -1,6 +1,7 @@
 import { getDocumentationBySlug, getAllDocumentationRoutes } from "@/lib/documentation"
 import DocContent from "@/app/components/doc-content"
 import { notFound } from "next/navigation"
+import { Metadata, ResolvingMetadata } from "next"
 
 export async function generateStaticParams() {
   const routes = getAllDocumentationRoutes()
@@ -8,6 +9,46 @@ export async function generateStaticParams() {
     slug: route.slug,
   }))
 }
+type Params = Promise<{ slug: string }>;
+export async function generateMetadata(
+  { params }: { params:Params },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const { slug } = await params;
+  const doc =  getDocumentationBySlug(slug)
+  if (!doc) {
+    return {
+      title: "Guide Post Not Found - Leedsapp Blog",
+      description: "The requested  post could not be found.",
+      openGraph: {
+        title: " Post Not Found",
+        description: "The requested post could not be found.",
+        images: [],
+        type: "article",
+        locale: "en_US",
+      },
+    };
+  }
+  const imageFromContent = doc.content.find((item) => item.type === "image")?.src;
+const imageFromCarousel = doc.content.find((item) => item.type === "carousel")?.items?.[0]?.src;
+
+const imageUrl = imageFromContent || imageFromCarousel || "/default-image.png";
+  return {
+    title: `${doc?.title} - LeedsApp Guide`,
+    description: doc.description || `LeedsApp product guide for ${doc.title}`,
+    openGraph: {
+      title: doc?.title,
+      description: doc.description || `LeedsApp product guide for ${doc.title}`,
+      images: [imageUrl],
+      type: "article",
+      locale: "en_US",
+    },
+    
+  };
+}
+
 
 export default  function DocumentationPage({ params }: { params: { slug: string } }) {
   const doc =  getDocumentationBySlug(params.slug)

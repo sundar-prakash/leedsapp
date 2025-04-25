@@ -1,7 +1,8 @@
 import Image from "next/image";
 import ContactForm from "../components/contact-form";
 import Link from "next/link";
-
+import { Metadata } from "next";
+export const metadata: Metadata = { title: "Contact" };
 export default function ContactPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -11,8 +12,8 @@ export default function ContactPage() {
         </h1>
         <div className="w-20 h-1 bg-[#ED3059] mx-auto mb-8"></div>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Have questions about LeedsApp? We&aposre here to help. Reach out to us and
-          we&aposll get back to you as soon as possible.
+          Have questions about LeedsApp? We&aposre here to help. Reach out to us
+          and we&aposll get back to you as soon as possible.
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -37,10 +38,8 @@ export default function ContactPage() {
                       className="w-6 h-6 text-[#ED3059] mr-3 flex-shrink-0 mt-1"
                     />
                     <span>
-                    36/5 BHARATHI PERUMAL STREET,
-Opp AAVIN FACTORY,
-CHITHODE 
-ERODE: 638012
+                      36/5 BHARATHI PERUMAL STREET, Opp AAVIN FACTORY, CHITHODE
+                      ERODE: 638012
                     </span>
                   </Link>
                 </li>
@@ -79,7 +78,6 @@ ERODE: 638012
                 Our Location
               </h2>
               <div className="aspect-video relative rounded-lg overflow-hidden">
-              
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3910.9683758464266!2d77.66534037505122!3d11.409841488780042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDI0JzM1LjQiTiA3N8KwNDAnMDQuNSJF!5e0!3m2!1sen!2sin!4v1745414016266!5m2!1sen!2sin"
                   width="600"
