@@ -2,7 +2,7 @@
 
 import {useState} from 'react'
 
-export default function FeedbackButtons({slug}: {slug: string}) {
+export default function FeedbackButtons({ slug, title }: { slug: string; title: string }) {
   const [submitted, setSubmitted] = useState(false)
 
   const handleFeedback = async (type: 'helpful' | 'notHelpful') => {
@@ -12,7 +12,7 @@ export default function FeedbackButtons({slug}: {slug: string}) {
       const response = await fetch('/api/feedback', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({slug, type}),
+        body: JSON.stringify({slug, type, title}),
       })
 
       if (response.ok) setSubmitted(true)
