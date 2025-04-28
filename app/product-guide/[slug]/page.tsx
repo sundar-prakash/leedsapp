@@ -90,7 +90,7 @@ export default async function DocumentationPage({
       )}
 
       <DocContent content={doc.content} />
-      <FeedbackButtons slug={doc.slug} />
+      <FeedbackButtons title={doc.title} slug={doc.slug} />
 
       {/* Related Product Guides */}
       <div className="mt-12 border-t pt-6">
