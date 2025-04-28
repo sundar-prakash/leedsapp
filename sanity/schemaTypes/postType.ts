@@ -50,6 +50,7 @@ export const postType = defineType({
       name: 'body',
       type: 'blockContent',
     }),
+    
   ],
   preview: {
     select: {

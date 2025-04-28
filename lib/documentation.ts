@@ -1,9 +1,8 @@
-import documentationData from "./docs-data"
+import documentationData from "./docs-data-2"
 
 export interface DocRoute {
     title: string
     slug: string
-    category: string
     order: number
   }
   
@@ -21,7 +20,7 @@ export interface DocRoute {
     title: string
     slug: string
     description?: string
-    category: string
+    category?: string
     order: number
     content: DocContentBlock[]
   }
@@ -33,23 +32,15 @@ export interface DocRoute {
       .map((doc) => ({
         title: doc.title,
         slug: doc.slug,
-        category: doc.category,
         order: doc.order,
       }))
       .sort((a, b) => {
-        // Sort by category first, then by order
-        // if (a.category !== b.category) {
-        //   return a.category.localeCompare(b.category)
-        // }
+ 
         return a.order - b.order
       })
   }
   
   export function getDocumentationBySlug(slug: string): Documentation | undefined {
     return documentationData.find((doc) => doc.slug === slug)
-  }
-  
-  export function getDocumentationByCategory(category: string): Documentation[] {
-    return documentationData.filter((doc) => doc.category === category).sort((a, b) => a.order - b.order)
   }
   

@@ -64,28 +64,39 @@ export default function DocContent({
               <div key={index} className="my-6">
                 {!block.isMobile ? (
                   // Desktop video
-                  <video
-                    src={block.src}
-                    controls
-                    muted={false}
-                    autoPlay={false}
-                    playsInline
-                    className="w-full h-full rounded-lg border hidden sm:block aspect-video"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
+                  <div className="hidden sm:block">
+                    <h2 className="text-2xl text-gray-600 font-bold my-3">
+                      {block.title}
+                    </h2>
+                    <video
+                      src={block.src}
+                      controls
+                      muted={false}
+                      autoPlay={false}
+                      playsInline
+                      className="w-full h-full rounded-lg border  aspect-video"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 ) : (
                   // Mobile video
-                  <video
-                    src={block.src}
-                    controls
-                    muted={false}
-                    autoPlay={false}
-                    playsInline
-                    className="w-full h-full rounded-lg border block sm:hidden aspect-[9/16]"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
+                  <div className="block sm:hidden">
+                    {" "}
+                    <h2 className="text-2xl text-gray-600 font-bold my-3">
+                      {block.title}
+                    </h2>
+                    <video
+                      src={block.src}
+                      controls
+                      muted={false}
+                      autoPlay={false}
+                      playsInline
+                      className="w-full h-full rounded-lg border  aspect-[9/16]"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 )}
               </div>
             );
