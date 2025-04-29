@@ -72,12 +72,12 @@ export default function DocImageCarousel({ items }: { items: CarouselItem[] }) {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <div className="relative embla">
+    <div className="relative embla ">
       {/* Arrow Buttons (web only, hidden on mobile) */}
       <LeftArrow onClick={scrollPrev} disabled={!canScrollPrev} />
       <RightArrow onClick={scrollNext} disabled={!canScrollNext} />
 
-      <div className="overflow-hidden embla__viewport" ref={emblaRef}>
+      <div className="overflow-hidden embla__viewport " ref={emblaRef}>
         <div className="flex">
           {items.map((e, i) => (
             <div key={i} className="flex-[0_0_100%] px-2">
@@ -87,7 +87,7 @@ export default function DocImageCarousel({ items }: { items: CarouselItem[] }) {
                   alt={e.alt}
                   width={800}
                   height={450}
-                  className="w-full h-auto object-cover"
+                  className="w-screen h-auto object-cover"
                 />
               </div>
             </div>

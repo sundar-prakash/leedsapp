@@ -2,26 +2,11 @@ import { Documentation } from "./documentation";
 
 const documentationData: Documentation[] = [
   {
-    title: "Introduction to LeedsApp",
-    slug: "introduction",
-    description:
-      "Get started with LeedsApp and learn how to streamline your business operations",
-    order: 1,
-    content: [
-      {
-        type: "image",
-        src: "/docs/intro-preview.png",
-        alt: "LeedsApp Dashboard",
-        caption:
-          "The LeedsApp dashboard provides a comprehensive overview of your business activities",
-      },
-    ],
-  },
-  {
     title: "Calls",
     slug: "calls",
     description: "Manage and track all your important calls in one place",
     order: 1,
+    icon: { url: "/docs/01_Calls/call.svg", color: "#4CAF50" },
     content: [
       {
         id: "1",
@@ -75,6 +60,7 @@ const documentationData: Documentation[] = [
   {
     title: "Tasks",
     slug: "tasks",
+    icon: { url: "/docs/02_Tasks/task.svg", color: "#2196F3" },
     description: "Organize and prioritize your work efficiently",
     order: 2,
     content: [
@@ -130,6 +116,7 @@ const documentationData: Documentation[] = [
   {
     title: "Payments",
     slug: "payments",
+    icon: { url: "/docs/03_Payments/payment.svg", color: "#219C90" },
     description: "Track and manage all payment activities efficiently",
     order: 3,
     content: [
@@ -184,6 +171,10 @@ const documentationData: Documentation[] = [
   {
     title: "Leads Tracking",
     slug: "leads-tracking",
+    icon: {
+      url: "/docs/04_Leads_Tracking/lead-tracking-center.svg",
+      color: "#2196F3",
+    },
     description: "Effectively monitor and manage your sales pipeline",
     order: 4,
     content: [
@@ -238,7 +229,10 @@ const documentationData: Documentation[] = [
   {
     title: "Effortless Team",
     slug: "effortless-team",
-    description: "Collaborate seamlessly with your team members",
+    icon: { url: "/docs/05_Effortless_Teams/teams.svg", color: "#836FFF" },
+
+    description:
+      "Collaborate with your team members and follow up your leads on time.",
     order: 5,
     content: [
       {
@@ -292,7 +286,10 @@ const documentationData: Documentation[] = [
   {
     title: "Project Feature",
     slug: "project-feature",
-    description: "Manage complex projects with ease",
+    icon: { url: "/docs/06_Project_feature/projects.svg", color: "#FFC107" },
+
+    description:
+      "Create and customize your business website based on your product service.",
     order: 6,
     content: [
       {
@@ -346,8 +343,11 @@ const documentationData: Documentation[] = [
   {
     title: "Integration",
     slug: "integration",
-    description: "Connect LeedsApp with your favorite tools and services",
-    order: 3,
+    icon: { url: "/docs/08_Integration/integrations.svg", color: "#ee8282" },
+
+    description:
+      "Integrate leads directly from Facebook Ads. Website, Landing page.",
+    order: 8,
     content: [
       {
         id: "1",
@@ -388,7 +388,10 @@ const documentationData: Documentation[] = [
   {
     title: "Bulk Import",
     slug: "bulk-import",
-    description: "Import multiple leads, contacts, or projects at once",
+    icon: { url: "/docs/07_Bulk_import/bulk-imports.svg", color: "#4CAF50" },
+
+    description:
+      "Easily import leads in bulk from Excel directly into LeedsApp",
     order: 7,
     content: [
       {
@@ -442,9 +445,11 @@ const documentationData: Documentation[] = [
   {
     title: "Leads Form",
     slug: "leads-form",
+    icon: { url: "/docs/09_Lead_forms/lead_forms.svg", color: "#9B4444" },
+
     description:
-      "Create custom forms to capture leads directly from your website",
-    order: 8,
+      "Create fully customizable lead forms to easily capture leads.",
+    order: 9,
     content: [
       {
         id: "1",

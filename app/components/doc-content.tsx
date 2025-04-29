@@ -65,9 +65,9 @@ export default function DocContent({
                 {!block.isMobile ? (
                   // Desktop video
                   <div className="hidden sm:block">
-                    <h2 className="text-2xl text-gray-600 font-bold my-3">
+                    {/* <h2 className="text-2xl text-gray-600 font-bold my-3">
                       {block.title}
-                    </h2>
+                    </h2> */}
                     <video
                       src={block.src}
                       controls
@@ -83,9 +83,9 @@ export default function DocContent({
                   // Mobile video
                   <div className="block sm:hidden">
                     {" "}
-                    <h2 className="text-2xl text-gray-600 font-bold my-3">
+                    {/* <h2 className="text-2xl text-gray-600 font-bold my-3">
                       {block.title}
-                    </h2>
+                    </h2> */}
                     <video
                       src={block.src}
                       controls

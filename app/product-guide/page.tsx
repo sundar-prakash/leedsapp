@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProductGuideHome() {
-  const doc = getDocumentationBySlug("introduction");
+  const doc = getDocumentationBySlug("calls");
 
   return (
     <div>

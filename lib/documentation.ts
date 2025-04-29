@@ -2,6 +2,8 @@ import documentationData from "./docs-data-2"
 
 export interface DocRoute {
     title: string
+    description?:string;
+    icon?:{url:string,color:string};
     slug: string
     order: number
   }
@@ -20,6 +22,7 @@ export interface DocRoute {
     title: string
     slug: string
     description?: string
+    icon?:{url:string,color:string};
     category?: string
     order: number
     content: DocContentBlock[]
@@ -32,6 +35,8 @@ export interface DocRoute {
       .map((doc) => ({
         title: doc.title,
         slug: doc.slug,
+        description: doc.description,
+        icon:doc.icon,
         order: doc.order,
       }))
       .sort((a, b) => {

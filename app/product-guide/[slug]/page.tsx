@@ -79,19 +79,16 @@ export default async function DocumentationPage({
   return (
     <div>
       {/* Share button and title */}
-      <div className="flex items-center justify-between mb-6">
+    
+        <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
        
-
-        <h1 className="text-3xl font-bold">{doc.title}</h1>
-        <ShareButtons title={doc.title} slug={doc.slug} />
-      </div>
       {doc.description && (
         <p className="text-gray-600 mb-8">{doc.description}</p>
       )}
 
       <DocContent content={doc.content} />
       <FeedbackButtons title={doc.title} slug={doc.slug} />
-
+      <ShareButtons title={doc.title} slug={doc.slug} />
       {/* Related Product Guides */}
       <div className="mt-12 border-t pt-6">
         <h2 className="text-xl font-semibold mb-4">Related Product Guides</h2>

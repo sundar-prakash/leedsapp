@@ -27,27 +27,27 @@ export default function ShareButtons({ title, slug }: { title: string; slug: str
   };
 
   return (
-    <div className="mr-3 flex items-center gap-2">
+    <div className="mr-3 flex items-center gap-4 justify-center my-4">
       <CopyToClipboard text={shareUrl} onCopy={handleCopy}>
         <button className="flex items-center rounded-full p-2 bg-gray-100 hover:bg-gray-200">
           {copied ? (
-            <CheckmarkIcon className="h-6 w-6 text-green-600" />
+            <CheckmarkIcon className="h-5 w-5 text-green-600" />
           ) : (
-            <LinkIcon className="h-6 w-6 text-gray-600" />
+            <LinkIcon className="h-5 w-5 text-gray-600" />
           )}
         </button>
       </CopyToClipboard>
 
       <FacebookShareButton url={shareUrl} title={title}>
-        <FacebookIcon size={25} round />
+        <FacebookIcon size={30} round />
       </FacebookShareButton>
 
       <TwitterShareButton url={shareUrl} title={title}>
-        <TwitterIcon size={25} round />
+        <TwitterIcon size={30} round />
       </TwitterShareButton>
 
       <WhatsappShareButton url={shareUrl} title={title} separator=": ">
-        <WhatsappIcon size={25} round />
+        <WhatsappIcon size={30} round />
       </WhatsappShareButton>
     </div>
   );

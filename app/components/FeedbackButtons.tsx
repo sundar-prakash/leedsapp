@@ -27,7 +27,7 @@ export default function FeedbackButtons({
   };
 
   return (
-    <div className="flex justify-center gap-4">
+    <div className="flex justify-center gap-4 my-6">
       <button
         onClick={() => handleFeedback("helpful")}
         disabled={submitted}
