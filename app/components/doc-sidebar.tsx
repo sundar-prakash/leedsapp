@@ -52,11 +52,11 @@ export default function DocSidebar({
           {/* Title and description */}
           <div>
             <div className={`text-base font-semibold `}>{route.title}</div>
-            {route.description && (
+            {/* {route.description && (
               <div className="text-xs text-gray-500 mt-0.5">
                 {route.description}
               </div>
-            )}
+            )} */}
           </div>
         </Link>
       ))}
