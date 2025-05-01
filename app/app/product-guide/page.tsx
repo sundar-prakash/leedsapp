@@ -34,8 +34,8 @@ export default function ProductGuideHome() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6">Product Guide</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="px-4  pt-8 md:px-2 text-3xl font-bold mb-6">Product Guide</h1>
+      <p className="px-4  pb-8 md:px-2 text-gray-600 mb-8">
         Welcome to the LeedsApp product guide. Here you&apos;ll find everything
         you need to know about using our platform effectively.
       </p>
