@@ -71,6 +71,7 @@ export default function DocContent({
                     <video
                       src={block.src}
                       controls
+                      poster={block.src.replace(/\.[^/.]+$/, '.png')}
                       muted={false}
                       autoPlay={false}
                       playsInline
@@ -81,7 +82,7 @@ export default function DocContent({
                   </div>
                 ) : (
                   // Mobile video
-                  <div className="px-4 py-8 md:px-8 md:py-12 block sm:hidden">
+                  <div className="px-4 py-8  block sm:hidden">
                     {" "}
                     {/* <h2 className="text-2xl text-gray-600 font-bold my-3">
                       {block.title}
@@ -89,10 +90,11 @@ export default function DocContent({
                     <video
                       src={block.src}
                       controls
+                      poster={block.src.replace(/\.[^/.]+$/, '.png')}
                       muted={false}
                       autoPlay={false}
                       playsInline
-                      className="px-4 py-8 md:px-8 md:py-12 w-full h-full rounded-lg border  aspect-[9/16]"
+                      className="px-4 py-8  w-full h-full rounded-lg border  aspect-[9/16]"
                     >
                       Your browser does not support the video tag.
                     </video>
