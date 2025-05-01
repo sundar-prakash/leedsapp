@@ -1,4 +1,5 @@
 "use client";
+import { useCallback } from "react";
 import { Card, CardContent } from "../Card";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -42,19 +43,53 @@ export default function Section2() {
       "(max-width: 767px)": { slidesToScroll: 1 },
     },
   });
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+
+  // Arrow button handlers
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <section className="relative w-full p-5">
-      <div className=" py-16 md:px-6  rounded-xl  ">
-        <div className="bg-[#FEF7FA]  left-0 right-0 bottom-[28rem] md:bottom-[24rem] w-[94vw] mx-auto absolute h-[25rem] w-full rounded-2xl -z-10" />
+      <div className="py-16 md:px-6 rounded-xl">
+        <div className="bg-[#FEF7FA] left-0 right-0 bottom-[28rem] md:bottom-[24rem] w-[94vw] mx-auto absolute h-[25rem] w-full rounded-2xl -z-10" />
 
-        <h2 className="text-3xl font-bold text-center  text-[#424242] lg:leading-[48px] ">
-          What does <span className="bg-[#ED2F59] text-white">LeedsApp</span>{" "}
-          do?
+        <h2 className="text-3xl font-bold text-center text-[#424242] lg:leading-[48px]">
+          What does <span className="bg-[#ED2F59] text-white">LeedsApp</span> do?
         </h2>
 
         <div className="relative h-auto max-w-6xl mx-auto">
+          {/* Mobile Arrow Buttons */}
+          <div className="flex justify-between items-center absolute top-1/2 left-0 right-0 px-2 z-20 lg:hidden pointer-events-none">
+            <button
+              className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center pointer-events-auto"
+              onClick={scrollPrev}
+              aria-label="Previous"
+              type="button"
+            >
+              {/* Left Arrow SVG */}
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <button
+              className="bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center pointer-events-auto"
+              onClick={scrollNext}
+              aria-label="Next"
+              type="button"
+            >
+              {/* Right Arrow SVG */}
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {data.map((e, i) => (

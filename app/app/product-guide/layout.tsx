@@ -132,7 +132,7 @@ export default function DocumentationLayout({
 
         {/* Main Content */}
         <div className="flex-1 overflow-auto">
-          <div className="max-w-3xl mx-auto px-4 py-8 md:px-8 md:py-12">
+          <div className="max-w-3xl mx-auto ">
             <Suspense fallback={<div>Loading content...</div>}>
               {children}
             </Suspense>

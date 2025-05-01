@@ -80,10 +80,10 @@ export default async function DocumentationPage({
     <div>
       {/* Share button and title */}
     
-        <h1 className="text-3xl font-bold mb-4">{doc.title}</h1>
+        <h1 className="px-4 pt-8  md:px-2  text-3xl font-bold mb-4">{doc.title}</h1>
        
       {doc.description && (
-        <p className="text-gray-600 mb-8">{doc.description}</p>
+        <p className="px-4  pb-8 md:px-2  text-gray-600 mb-8">{doc.description}</p>
       )}
 
       <DocContent content={doc.content} />

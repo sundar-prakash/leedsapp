@@ -22,13 +22,16 @@ export default function DocSidebar({
 
   // Sort routes by order (just in case)
   const sortedRoutes = [...routes].sort((a, b) => a.order - b.order);
+  const basePath = pathname.startsWith('/app/product-guide')
+  ? '/app/product-guide'
+  : '/product-guide';
 
   return (
     <nav className="space-y-2">
       {sortedRoutes.map((route) => (
         <Link
           key={route.slug}
-          href={`/product-guide/${route.slug}`}
+          href={`${basePath}/${route.slug}`}
           className={cn(
             "flex items-start gap-3 px-3 py-3 rounded-lg transition group",
             pathname === `/product-guide/${route.slug}`
