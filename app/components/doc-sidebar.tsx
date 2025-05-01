@@ -39,7 +39,7 @@ export default function DocSidebar({
         >
           {/* Icon */}
           {route.icon && (
-            <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center">
+            <div className="rounded-[0.4rem] flex-shrink-0 w-9 h-9 bg-green-50 flex items-center justify-center">
               <Image
                 src={route.icon?.url}
                 alt=""

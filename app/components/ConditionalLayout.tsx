@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 
 export default function ConditionalLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isProductGuide = pathname.startsWith("/product-guide");
+  const isProductGuide = pathname.startsWith("/app/product-guide");
 
   return (
     <>
