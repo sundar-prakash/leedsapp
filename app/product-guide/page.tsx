@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProductGuideHome() {
-  redirect('/app/product-guide/calls');
+  redirect('/product-guide/calls');
   
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
