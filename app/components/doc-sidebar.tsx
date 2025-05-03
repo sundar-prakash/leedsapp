@@ -33,8 +33,8 @@ export default function DocSidebar({
           key={route.slug}
           href={`${basePath}/${route.slug}`}
           className={cn(
-            "flex items-start gap-3 px-3 py-3 rounded-lg transition group",
-            pathname === `/product-guide/${route.slug}`
+            "flex items-center gap-3 px-3 py-3 rounded-xl transition group",
+            pathname === `${basePath}/${route.slug}`
               ? "bg-[#ED3059]/10 text-[#ED3059] font-medium"
               : "text-gray-700 hover:bg-gray-100"
           )}

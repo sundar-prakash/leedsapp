@@ -61,7 +61,7 @@ export default function DocContent({
 
           case "video":
             return (
-              <div key={index} className="px-4 py-8 md:px-8 md:py-12 my-6">
+              <div key={index} className="my-6">
                 {!block.isMobile ? (
                   // Desktop video
                   <div className="hidden sm:block">
@@ -75,14 +75,14 @@ export default function DocContent({
                       muted={false}
                       autoPlay={false}
                       playsInline
-                      className="w-full h-full rounded-lg border  aspect-video"
+                      className="w-full h-full aspect-video"
                     >
                       Your browser does not support the video tag.
                     </video>
                   </div>
                 ) : (
                   // Mobile video
-                  <div className="px-4 py-8  block sm:hidden">
+                  <div className=" block sm:hidden">
                     {" "}
                     {/* <h2 className="text-2xl text-gray-600 font-bold my-3">
                       {block.title}
@@ -94,7 +94,7 @@ export default function DocContent({
                       muted={false}
                       autoPlay={false}
                       playsInline
-                      className="px-4 py-8  w-full h-full rounded-lg border  aspect-[9/16]"
+                      className=" w-full h-full  aspect-[9/16]"
                     >
                       Your browser does not support the video tag.
                     </video>

@@ -80,7 +80,7 @@ export default function DocImageCarousel({ items }: { items: CarouselItem[] }) {
       <div className="overflow-hidden embla__viewport " ref={emblaRef}>
         <div className="flex">
           {items.map((e, i) => (
-            <div key={i} className="flex-[0_0_100%] px-2">
+            <div key={i} className="flex-[0_0_100%] ">
               <div className="rounded-lg overflow-hidden border">
                 <Image
                   src={e.src}

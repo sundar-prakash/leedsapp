@@ -1,5 +1,4 @@
-import { getDocumentationBySlug } from "@/lib/documentation";
-import DocContent from "@/app/components/doc-content";
+import { redirect } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,21 +29,11 @@ export const metadata: Metadata = {
 };
 
 export default function ProductGuideHome() {
-  const doc = getDocumentationBySlug("calls");
-
+  redirect('/app/product-guide/calls');
+  
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-6">Product Guide</h1>
-      <p className="text-gray-600 mb-8">
-        Welcome to the LeedsApp product guide. Here you&apos;ll find everything
-        you need to know about using our platform effectively.
-      </p>
-
-      {doc ? (
-        <DocContent content={doc.content} />
-      ) : (
-        <p>Loading documentation...</p>
-      )}
+    <div className="flex items-center justify-center h-screen bg-gray-100">
+      <h1>Loading guide...</h1>
     </div>
   );
 }

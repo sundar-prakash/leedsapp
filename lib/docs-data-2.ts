@@ -169,8 +169,8 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Leads Tracking",
-    slug: "leads-tracking",
+    title: "Leads Tracking Center",
+    slug: "leads-tracking-center",
     icon: {
       url: "/docs/04_Leads_Tracking/lead-tracking-center.svg",
       color: "#2196F3",
@@ -227,13 +227,13 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Effortless Team",
-    slug: "effortless-team",
+    title: "Teams",
+    slug: "teams",
     icon: { url: "/docs/05_Effortless_Teams/teams.svg", color: "#836FFF" },
 
     description:
       "Collaborate with your team members and follow up your leads on time.",
-    order: 5,
+    order: 6,
     content: [
       {
         id: "1",
@@ -284,13 +284,13 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Project Feature",
-    slug: "project-feature",
+    title: "Projects",
+    slug: "projects",
     icon: { url: "/docs/06_Project_feature/projects.svg", color: "#FFC107" },
 
     description:
       "Create and customize your business website based on your product service.",
-    order: 6,
+    order: 5,
     content: [
       {
         id: "1",
@@ -341,13 +341,13 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Integration",
-    slug: "integration",
+    title: "Integrations",
+    slug: "integrations",
     icon: { url: "/docs/08_Integration/integrations.svg", color: "#ee8282" },
 
     description:
       "Integrate leads directly from Facebook Ads. Website, Landing page.",
-    order: 8,
+    order: 9,
     content: [
       {
         id: "1",
@@ -386,8 +386,8 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Bulk Import",
-    slug: "bulk-import",
+    title: "Bulk Imports",
+    slug: "bulk-imports",
     icon: { url: "/docs/07_Bulk_import/bulk-imports.svg", color: "#4CAF50" },
 
     description:
@@ -443,13 +443,13 @@ const documentationData: Documentation[] = [
     ],
   },
   {
-    title: "Leads Form",
-    slug: "leads-form",
+    title: "Leads Forms",
+    slug: "leads-forms",
     icon: { url: "/docs/09_Lead_forms/lead_forms.svg", color: "#9B4444" },
 
     description:
       "Create fully customizable lead forms to easily capture leads.",
-    order: 9,
+    order: 6,
     content: [
       {
         id: "1",

@@ -4,7 +4,7 @@ import { useState, useEffect, type ReactNode } from "react";
 import { Suspense } from "react";
 import DocSidebar from "@/app/components/doc-sidebar";
 import { getAllDocumentationRoutes } from "@/lib/documentation";
-
+import PageTransition from "../components/PageTransition";
 
 export default function DocumentationLayout({
   children,
@@ -132,11 +132,16 @@ export default function DocumentationLayout({
 
         {/* Main Content */}
         <div className="flex-1 overflow-auto">
-          <div className="max-w-3xl mx-auto px-4 py-8 md:px-8 md:py-12">
-            <Suspense fallback={<div>Loading content...</div>}>
-              {children}
+          <div className="max-w-3xl mx-auto ">
+            <Suspense
+              fallback={
+                <div className="flex items-center  justify-center h-screen bg-gray-100">
+                  Loading content...
+                </div>
+              }
+            >
+              <PageTransition>{children}</PageTransition>
             </Suspense>
-            
           </div>
         </div>
       </div>
