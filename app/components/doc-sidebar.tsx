@@ -3,8 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
+import { cn, hexToRgb } from "@/lib/utils";
 import type { DocRoute } from "@/lib/documentation";
+
+
 
 export default function DocSidebar({
   routes,
@@ -42,7 +44,8 @@ export default function DocSidebar({
         >
           {/* Icon */}
           {route.icon && (
-            <div className="rounded-[0.4rem] flex-shrink-0 w-9 h-9 bg-green-50 flex items-center justify-center">
+            <div className={`rounded-[0.4rem] flex-shrink-0 w-9 h-9 flex items-center justify-center`}  style={{ backgroundColor: `rgba(${hexToRgb(route.icon.color)}, 0.1)` }}
+>
               <Image
                 src={route.icon?.url}
                 alt=""

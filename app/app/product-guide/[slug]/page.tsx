@@ -10,6 +10,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import ShareButtons from "@/app/components/ShareBtn";
 import FeedbackButtons from "@/app/components/FeedbackButtons";
 import Image from "next/image";
+import { hexToRgb } from "@/lib/utils";
 export async function generateStaticParams() {
   const routes = getAllDocumentationRoutes();
   return routes.map((route) => ({
@@ -106,7 +107,12 @@ export default async function DocumentationPage({
             >
               {/* Icon */}
               {guide.icon && (
-                <div className="rounded-[0.4rem] flex-shrink-0 w-9 h-9 bg-green-50 flex items-center justify-center">
+                <div
+                  className={`rounded-[0.4rem] flex-shrink-0 w-9 h-9 flex items-center justify-center`}
+                  style={{
+                    backgroundColor: `rgba(${hexToRgb(guide.icon.color)}, 0.1)`,
+                  }}
+                >
                   <Image
                     src={guide.icon?.url}
                     alt=""
