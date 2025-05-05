@@ -93,10 +93,6 @@ const documentationData: Documentation[] = [
             src: "/docs/02_Tasks/Reminders_07.jpg",
             alt: "Task notification settings",
           },
-          {
-            src: "/docs/02_Tasks/Reminders_08.jpg",
-            alt: "Task analytics dashboard",
-          },
         ],
       },
       {

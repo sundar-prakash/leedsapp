@@ -9,7 +9,7 @@ import { useCallback, useEffect, useState } from "react";
 function LeftArrow({ onClick, disabled }: { onClick: () => void; disabled: boolean }) {
   return (
     <button
-      className="flex embla__button embla__prev absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg p-2"
+      className="flex  lg:hidden embla__button embla__prev absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg p-2"
       onClick={onClick}
       disabled={disabled}
       aria-label="Previous"
@@ -25,7 +25,7 @@ function LeftArrow({ onClick, disabled }: { onClick: () => void; disabled: boole
 function RightArrow({ onClick, disabled }: { onClick: () => void; disabled: boolean }) {
   return (
     <button
-      className="flex embla__button embla__next absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg p-2"
+      className="flex lg:hidden embla__button embla__next absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full shadow-lg p-2"
       onClick={onClick}
       disabled={disabled}
       aria-label="Next"

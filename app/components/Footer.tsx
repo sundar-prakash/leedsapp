@@ -82,7 +82,7 @@ const Footer = () => {
             <Link
               target="_blank"
               href="https://wa.me/919787575752"
-              className="border rounded-xl bg-[#f4fdf8] border-[#2dc764] p-6 text-black flex flex-col gap-6"
+              className="border rounded-xl bg-[#f4fdf8] border-[#2dc764] p-6 text-black flex flex-col gap-6 hidden"
             >
               <p>Need help? Chat with our support team on WhatsApp</p>
               <div className="flex flex-row items-center justify-between gap-5">
@@ -148,6 +148,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <script
+        type="text/javascript"
+        src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+        id="aisensy-wa-widget"
+        widget-id="aaac3z"
+      ></script>
     </footer>
   );
 };
