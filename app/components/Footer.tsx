@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { WhatsappIcon } from "react-share";
+import Script from "next/script";
 
 const Footer = () => {
   return (
@@ -148,12 +149,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <script
-        type="text/javascript"
-        src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
-        id="aisensy-wa-widget"
-        widget-id="aaac3z"
-      ></script>
+      <Script
+  src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+  id="aisensy-wa-widget"
+  strategy="afterInteractive"
+  data-widget-id="aaac3z"
+/>
     </footer>
   );
 };
