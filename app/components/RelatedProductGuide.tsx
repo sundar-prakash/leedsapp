@@ -17,6 +17,8 @@ export default function RelatedGuides({
   allRoutes,
   limit = 4,
 }: RelatedGuidesProps) {
+  const pathname = usePathname();
+
   // Filter out the current guide and get the specified number of related guides
   const related = allRoutes
     .filter((route) => route.slug !== currentSlug)
@@ -25,7 +27,6 @@ export default function RelatedGuides({
   if (related.length === 0) {
     return null;
   }
-  const pathname = usePathname();
   const basePath = pathname.startsWith("/app/product-guide")
     ? "/app/product-guide"
     : "/product-guide";
