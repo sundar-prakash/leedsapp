@@ -150,11 +150,11 @@ const Footer = () => {
         </div>
       </div>
       <Script
-  src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
-  id="aisensy-wa-widget"
-  strategy="afterInteractive"
-  data-widget-id="aaac3z"
-/>
+        type="text/javascript"
+        src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+        id="aisensy-wa-widget"
+        widget-id="aaac3z"
+      />
     </footer>
   );
 };
