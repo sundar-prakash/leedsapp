@@ -35,9 +35,18 @@ export const RichTextComponents = {
   types: {
     image: ({ value, isInline }: ImageProps) => {
       const { width, height } = getImageDimensions(value);
+      const imageUrl = (() => {
+        try {
+          return value && value.asset
+            ? urlFor(value).url()
+            : "/placeholder.png";
+        } catch {
+          return "/placeholder.png";
+        }
+      })();
       return (
         <Image
-          src={urlFor(value).url()}
+          src={imageUrl}
           alt={value.alt || " "}
           loading="lazy"
           width={width}

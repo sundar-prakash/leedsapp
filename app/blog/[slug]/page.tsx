@@ -8,7 +8,7 @@ import BlogArticle from "@/app/components/BlogArticle";
 import { fullBlogQuery, relatedBlogsQuery } from "@/lib/queries";
 import { RichTextComponents } from "@/app/components/RichTextBuilder";
 
-export const revalidate = 60;
+export const revalidate = 60; // 60 seconds
 
 export interface FullBlog {
   currentSlug: string;

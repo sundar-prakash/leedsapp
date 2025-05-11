@@ -50,4 +50,4 @@ export default async function Page() {
   );
 }
 
-export const revalidate = 10; // Revalidate at most every hour
+export const revalidate = 60; // Revalidate at most every hour
