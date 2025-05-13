@@ -90,6 +90,25 @@ export default async function FullBlogArticle({ params }: { params: Params }) {
   return (
     <div className="bg-gradient-to-b from-[#f1f1f1] from-[200px] lg:from-[400px] to-[#ffffff] to-[450px] justify-items-center">
       <div className="w-[90%] max-w-6xl mx-auto">
+      <div className="pt-8 pb-4">
+  <Link
+    href="/blog"
+    className="inline-flex items-center gap-2 text-[#ED3059] hover:text-[#b91c3a] text-sm font-semibold transition-colors"
+  >
+    {/* Back arrow SVG */}
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+      <path
+        d="M15 19l-7-7 7-7"
+        stroke="#ED3059"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+    Back to Blogs
+  </Link>
+</div>
+
         <div className="justify-items-center max-w-full pt-10 pb-[130px]">
           <div className="grid grid-cols-1">
             <div className="flex pt-[20px] gap-[5px] md:gap-[5px] lg:gap-[10px]">
@@ -141,6 +160,15 @@ export default async function FullBlogArticle({ params }: { params: Params }) {
             <div className="justify-items-center pt-5 text-[#555555] max-w-[750px] pb-5">
               <PortableText value={content || []} components={RichTextComponents} />
             </div>
+            <div className="flex justify-center pt-8 pb-16">
+  <Link
+    href="/blog"
+    className="bg-[#ED3059] hover:bg-[#b91c3a] text-white font-semibold py-3 px-8 rounded-full shadow transition-colors"
+  >
+    View All Blogs
+  </Link>
+</div>
+
           </div>
         </div>
       </div>

@@ -83,43 +83,53 @@ const Header = () => {
           <nav className="mt-8">
             <ul className="space-y-4">
               <li>
-                <Link
-                  href="/"
-                  className="text-gray-700 hover:text-[#ED3059] block py-2"
-                >
-                  Home
+                <Link href="/" passHref>
+                  <span
+                    onClick={toggleSidebar}
+                    className="cursor-pointer text-gray-700 hover:text-[#ED3059] block py-2"
+                  >
+                    Home
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-700 hover:text-[#ED3059] block py-2"
-                >
-                  Blogs
+                <Link href="/blog" passHref>
+                  <span
+                    onClick={toggleSidebar}
+                    className="cursor-pointer text-gray-700 hover:text-[#ED3059] block py-2"
+                  >
+                    Blogs
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/faq"
-                  className="text-gray-700 hover:text-[#ED3059] block py-2"
-                >
-                  FAQs
+                <Link href="/faq" passHref>
+                  <span
+                    onClick={toggleSidebar}
+                    className="cursor-pointer text-gray-700 hover:text-[#ED3059] block py-2"
+                  >
+                    FAQs
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/product-guide"
-                  className="text-gray-700 hover:text-[#ED3059] block py-2"
-                >
-                  Product Guide
+                <Link href="/product-guide" passHref>
+                  <span
+                    onClick={toggleSidebar}
+                    className="cursor-pointer text-gray-700 hover:text-[#ED3059] block py-2"
+                  >
+                    Product Guide
+                  </span>
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-700 hover:text-[#ED3059] block py-2"
-                >
-                  Contact Us
+                <Link href="/contact" passHref>
+                  <span
+                    onClick={toggleSidebar}
+                    className="cursor-pointer text-gray-700 hover:text-[#ED3059] block py-2"
+                  >
+                    Contact Us
+                  </span>
                 </Link>
               </li>
             </ul>
